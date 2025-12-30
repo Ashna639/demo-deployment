@@ -5,13 +5,13 @@ export default function BookList() {
   const [books, setBooks] = useState([])
 
   const fetchBooks = async () => {
-    const response = await fetch('http://localhost:8000/api/books/')
+    const response = await fetch('https://demo-deployment-hxuv.onrender.com/api/books/')
     const data = await response.json()
     setBooks(data)
   }
 
   const deleteBook = async (id) => {
-    await fetch(`http://localhost:8000/api/books/${id}/`, { method: 'DELETE' })
+    await fetch(`https://demo-deployment-hxuv.onrender.com/api/books/${id}/`, { method: 'DELETE' })
     fetchBooks()
   }
 

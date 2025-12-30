@@ -7,7 +7,7 @@ export default function AddBook() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await fetch('http://localhost:8000/api/books/', {
+    await fetch('https://demo-deployment-hxuv.onrender.com/api/books/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
